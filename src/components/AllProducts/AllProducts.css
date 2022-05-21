@@ -1,0 +1,21 @@
+
+body{
+    background: #f2f4f8 !important;
+}
+.productContainer{
+    display:grid;
+    gap: 30px;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-between;
+    align-content: center;
+   
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .productContainer{
+    
+        grid-template-columns: auto auto  ;
+       
+    }
+  }
