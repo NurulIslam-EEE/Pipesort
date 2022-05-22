@@ -37,7 +37,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar sx={{background:'black'}} position="static">
+    <AppBar sx={{background:'white'}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
          
@@ -66,7 +66,7 @@ const NavBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="primary"
             >
               <MenuIcon />
             </IconButton>
@@ -120,9 +120,10 @@ const NavBar = () => {
               <Button
                 
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, fontWeight:'700', display: 'block' }}
+               color='primary'
               >
-                <Link to='/'>
+                <Link className='linkStyle' to='/'>
                 Home
                 </Link>
                 
@@ -158,11 +159,12 @@ const NavBar = () => {
                 </MenuItem>
               ))}
             </Menu> */}
-            <Link to='/signUp'>
+            <Link className='linkStyle' to='/signUp'>
                 <Button
                 
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2,  display: 'block',fontWeight:'700' }}
+                color="primary"
               >
                Sign Up
               </Button>
