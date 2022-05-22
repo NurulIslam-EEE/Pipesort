@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Pipesort
 
 The live URL of  [Pipesort](https://pipesort-01.netlify.app/).
 
