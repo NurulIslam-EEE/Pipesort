@@ -25,9 +25,9 @@ export default function CheckBoxList({state,setState}) {
   
 
   return (
-    <Box sx={{ m: 3,background:'white',padding:'10px 10px 30px 10px' }}>
+    <Box sx={{ m: 3,background:'white',padding:'10px 5px' }}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">Filter By</FormLabel>
+        <FormLabel component="legend">Filter By Category</FormLabel>
         <FormGroup>
           {state.map((d,i) => (
             <FormControlLabel

@@ -6,6 +6,7 @@ import { AllProducts } from "./AllProducts";
 import CheckBoxList from "../CommonComponents/CheckBoxList";
 import PriceRange from "../CommonComponents/PriceRange";
 import { Box, Typography } from "@mui/material";
+import Empty from "../CommonComponents/Empty";
 
 export default function AllProductsHome2() {
   // fetching products
@@ -109,7 +110,7 @@ export default function AllProductsHome2() {
 
   return (
     <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
-      <Grid container sx={{ maxWidth: "1400px" }}>
+      <Grid container sx={{ maxWidth: "1500px" }}>
         <Grid item sm={3} md={3} lg={2}>
           <CheckBoxList state={state} setState={setState} />
           <PriceRange handleChange={handleChange} value={value} />
@@ -120,14 +121,16 @@ export default function AllProductsHome2() {
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
-            <Grid item xs={12}>
+            <Grid sx={{marginRight: '20px',}} item xs={12}>
               <Box
                 sx={{
                   background: "white",
                   marginTop: "20px",
+                
                   height: "60px",
                   borderRadius: "8px",
                   width: "100%",
+                  
                   display: "flex ",
                   justifyContent: "space-between",
                   alignItems: "center",
@@ -151,7 +154,7 @@ export default function AllProductsHome2() {
             </Grid>
 
             <Grid item xs={12}>
-              <AllProducts filterProducts={filterProducts} />
+             {filterProducts.length>0? <AllProducts filterProducts={filterProducts} />:<Empty/>}
             </Grid>
           </Grid>
         </Grid>
